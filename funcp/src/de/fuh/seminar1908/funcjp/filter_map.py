@@ -16,9 +16,9 @@ def is_even(num):
 print("-- List")
 my_list = []
 for x in get_input():
-        if(is_even(x)):
-            my_list.append(multiply_with_3(x))
-            
+    if is_even(x):
+        my_list.append(multiply_with_3(x))
+
 print(my_list)
 for e in my_list:
     print(e)
@@ -29,22 +29,24 @@ my_list_compr = [multiply_with_3(x) for x in get_input() if is_even(x)]
 print(my_list_compr)
 for e in my_list_compr:
     print(e)
-    
+
 # generator expression
 print("-- Generator Expression")
 my_gen_exp = (multiply_with_3(x) for x in get_input() if is_even(x))
 print(my_gen_exp)
 for e in my_gen_exp:
     print(e)
-    
+
 # generator
 print("-- Generator")
+
+
 def gen():
     for x in get_input():
-        if(is_even(x)):
+        if is_even(x):
             yield multiply_with_3(x)
 
-my_gen = gen();
+my_gen = gen()
 print(my_gen)
 for e in my_gen:
     print(e)
