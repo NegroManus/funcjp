@@ -1,29 +1,38 @@
 import time
+from concurrent import futures
+
 
 class myclass:
+
     def mymethod(self):
         pass
 
+
 class mycallable:
+
     def __call__(self):
         pass
 
+
 def myfunc():
     pass
-        
+
+
 def mygenfunc():
     for x in range(0, 3):
         yield x
-        
-mylambda = lambda x: x;
 
-print('Built-in function: ', abs)
+mylambda = lambda x: x
+
+print('Built-in function: ', len)
 print('Built-in function from another module: ', time.clock)
+print('Library function from another module: ', futures.wait)
 
 print('User-defined function: ', myfunc)
 print('Lambda function: ', mylambda)
 
 print('Generator function: ', mygenfunc)
+print('Generator expression: ', (x for x in range(0)))
 print('Generator object: ', mygenfunc())
 
 print('Built-in class', dict)
@@ -39,4 +48,3 @@ print('Callable class: ', mycallable)
 print('Callable class instance: ', mycallable())
 print('Callable special call method: ', mycallable.__call__)
 print('Callable special call method of object: ', mycallable().__call__)
-
