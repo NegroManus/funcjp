@@ -1,3 +1,6 @@
+import collections.abc
+
+
 def get_input():
     print("Called get_input()")
     return range(10)
@@ -39,6 +42,8 @@ for e in my_gen_exp:
 
 # generator
 print("-- Generator")
+
+list.append(object)
 
 
 def gen():
