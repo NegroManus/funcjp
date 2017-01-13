@@ -6,8 +6,6 @@ print(add(0, 1))  # 1
 print(add(0, 1))  # 1
 
 # Beispiel 2
-
-
 class Adder:
     value = 0
 

@@ -1,7 +1,6 @@
 package de.fuh.seminar1908.funcjp;
 
 import java.util.Arrays;
-import java.util.function.DoubleUnaryOperator;
 
 public class CodeAsDataWithLambda {
     public static void main(String[] args) {
@@ -20,7 +19,7 @@ public class CodeAsDataWithLambda {
                 () -> System.out.println("Ich laufe in " + Thread.currentThread()));
         t2.start();
 
-        String[] fruits = new String[] { "Apple", "Melon", "Banana" };
+        String[] fruits = new String[]{"Apple", "Melon", "Banana"};
         // Comparator<String>-Implementierung:
         // - Parameterliste inklusive Typen
         // - Rumpf in Form eines Ausdrucks
@@ -34,14 +33,5 @@ public class CodeAsDataWithLambda {
         // - Rumpf in Form eines Ausdrucks
         Arrays.sort(fruits, (a, b) -> a.length() - b.length());
         System.out.println(Arrays.toString(fruits));
-
-        // DoubleUnaryOperator-Implementierung:
-        // - Parameterliste ohne Typen und Klammern
-        // - Rumpf in Form eines Ausdrucks
-        DoubleUnaryOperator pow = a -> a * a;
-        // Zur Ausführung muss die abstrakte Methode
-        // des Functional Interfaces aufgerufen werden.
-        double powerOf12 = pow.applyAsDouble(12);
-        System.out.println(powerOf12);
     }
 }

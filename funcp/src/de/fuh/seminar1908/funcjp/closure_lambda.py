@@ -1,7 +1,5 @@
 def makeAdder(x):
-    def adder(y):
-        return x + y
-    return adder
+    return lambda y: x + y
 
 add10To = makeAdder(10)
 print(add10To(5))  # 15
