@@ -1,6 +1,7 @@
 package de.fuh.seminar1908.funcjp;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.concurrent.Callable;
 
 public class MethRefKinds {
@@ -34,8 +35,8 @@ public class MethRefKinds {
 
         // (4.) Referenz auf eine Instanzmethode
         // eines beliebigen String-Objektes
-        String[] fruits = { "Apple", "Banana", "apple" };
-        Arrays.sort(fruits, String::compareToIgnoreCase);
+        String[] fruits = { "Apple", "Banana", "Melon" };
+        Arrays.sort(fruits, Comparator.comparing(String::length));
         System.out.println(Arrays.toString(fruits));
     }
 }
