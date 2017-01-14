@@ -3,9 +3,10 @@ package de.fuh.seminar1908.funcjp;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class BooksStream {
+public class BooksStreamParallel {
     public static List<String> getJavaBookTitles(List<Book> books) {
-        return books.stream().filter((b -> b.getTitle().contains("Java")))
+        return books.parallelStream()
+                .filter((b -> b.getTitle().contains("Java")))
                 .map(Book::getTitle).collect(Collectors.toList());
     }
 

@@ -4,29 +4,32 @@ import java.time.Year;
 import java.util.List;
 
 public class Book {
-    private final String title;
-    private final List<String> authors;
-
-    private final Year year;
-    private final int pages;
-
-    public Book(String title, List<String> authors, Year year, int pages) {
-        this.title = title;
-        this.authors = authors;
-        this.year = year;
-        this.pages = pages;
-    }
+    private String title;
+    private List<String> authors;
+    private Year year;
 
     public String getTitle() {
         return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public List<String> getAuthors() {
         return authors;
     }
 
-    public int getPages() {
-        return pages;
+    public void setAuthors(List<String> authors) {
+        this.authors = authors;
+    }
+
+    public Year getYear() {
+        return year;
+    }
+
+    public void setYear(Year year) {
+        this.year = year;
     }
 
     @Override
@@ -68,11 +71,6 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book [title=" + title + ", authors=" + authors + ", pages=" + pages
-                + ", year=" + year + "]";
-    }
-
-    public Year getYear() {
-        return year;
+        return "Book(" + title + ")";
     }
 }

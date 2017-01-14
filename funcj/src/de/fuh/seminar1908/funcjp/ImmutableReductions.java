@@ -10,7 +10,7 @@ public class ImmutableReductions {
     }
 
     public static IntStream nums() {
-        return IntStream.range(1, 101);
+        return IntStream.rangeClosed(1, 100);
     }
 
     public static void main(String[] args) {
