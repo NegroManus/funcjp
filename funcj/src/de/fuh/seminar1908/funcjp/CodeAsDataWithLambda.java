@@ -6,7 +6,7 @@ public class CodeAsDataWithLambda {
     public static void main(String[] args) {
         // Runnable-Implementierung:
         // - Leere Parameterliste
-        // - Rumpf in Form eines Anweisungsblockes
+        // - Rumpf in Form eines Anweisungsblocks
         Thread t1 = new Thread(() -> {
             System.out.println("Ich laufe in " + Thread.currentThread());
         });
@@ -15,14 +15,14 @@ public class CodeAsDataWithLambda {
         // Runnable-Implementierung:
         // - Leere Parameterliste
         // - Rumpf in Form eines Ausdrucks
-        Thread t2 = new Thread(
-                () -> System.out.println("Ich laufe in " + Thread.currentThread()));
+        Thread t2 = new Thread(() -> System.out
+                .println("Ich laufe in " + Thread.currentThread()));
         t2.start();
 
-        String[] fruits = new String[]{"Apple", "Melon", "Banana"};
+        String[] fruits = new String[]{"Banana", "Apple", "Melon"};
         // Comparator<String>-Implementierung:
         // - Parameterliste inklusive Typen
-        // - Rumpf in Form eines Ausdrucks
+        // - Rumpf in Form eines Anweisungsblocks
         Arrays.sort(fruits, (String a, String b) -> {
             return a.length() - b.length();
         });

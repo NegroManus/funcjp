@@ -13,7 +13,7 @@ public class Comparators {
         Comparator<String> lengthReversed = length.reversed();
         Comparator<String> lengthThenNatural = length.thenComparing(natural);
 
-        List<String> fruits = Arrays.asList("Melon", "Apple", "Banana");
+        List<String> fruits = Arrays.asList("Banana", "Apple", "Melon");
         List<Comparator<String>> cmps = Arrays.asList(natural, reverse, length,
                 lengthReversed, lengthThenNatural);
         for (Comparator<String> cmp : cmps) {

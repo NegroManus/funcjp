@@ -1,6 +1,6 @@
 fruits = ["Banana", "Apple", "Melon"]
 
-
+# Intermediate Operations
 starting_with_A = list(filter(lambda s: s.startswith("A"), fruits))
 print("Mit A beginnend:", starting_with_A)
 

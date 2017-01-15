@@ -25,7 +25,6 @@ fluent_python.year = 2016
 
 books = [j8_in_action, j8_lambdas, fluent_python]
 
-
 def get_python_book_titles(books):
     return list(map(lambda b: b.title,
                     filter(lambda b: "Python" in b.title, books)))
