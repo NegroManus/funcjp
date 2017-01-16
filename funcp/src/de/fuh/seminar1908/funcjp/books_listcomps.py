@@ -40,5 +40,5 @@ chars = {char.lower() for string in fruits for char in string}
 print(chars)
 
 # Dict Comprehension
-book_dict = {(b.title, b) for b in books}
+book_dict = {b.title: b for b in books}
 print(book_dict)

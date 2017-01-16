@@ -7,7 +7,7 @@ import java.util.concurrent.Callable;
 public class MethRefKinds {
     private static class ExpensiveObj {
         private ExpensiveObj() {
-            // teure Initialisierung
+            // Aufwändige Initialisierung
         }
     }
 
@@ -35,7 +35,7 @@ public class MethRefKinds {
 
         // (4.) Referenz auf eine Instanzmethode
         // eines beliebigen String-Objektes
-        String[] fruits = { "Apple", "Banana", "Melon" };
+        String[] fruits = {"Apple", "Banana", "Melon"};
         Arrays.sort(fruits, Comparator.comparing(String::length));
         System.out.println(Arrays.toString(fruits));
     }
