@@ -19,7 +19,7 @@ public class CodeAsDataWithLambda {
                 .println("Ich laufe in " + Thread.currentThread()));
         t2.start();
 
-        String[] fruits = new String[]{"Banana", "Apple", "Melon"};
+        String[] fruits = new String[]{"Banana", "Melon", "Apple"};
         // Comparator<String>-Implementierung:
         // - Parameterliste inklusive Typen
         // - Rumpf in Form eines Anweisungsblocks

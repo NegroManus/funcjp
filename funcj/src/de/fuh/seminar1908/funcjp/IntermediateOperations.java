@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 
 public class IntermediateOperations {
     public static Stream<String> streamFruits() {
-        return Stream.of("Banana", "Apple", "Melon");
+        return Stream.of("Banana", "Melon", "Apple");
     }
 
     public static void main(String[] args) {
@@ -28,6 +28,6 @@ public class IntermediateOperations {
         List<Character> chars = streamFruits().map(String::toLowerCase)
                 .flatMapToInt(String::chars).distinct().sorted()
                 .mapToObj(i -> (char) i).collect(Collectors.toList());
-        System.out.println("Zeichen: " + chars);
+        System.out.println("Verwendete Zeichen: " + chars);
     }
 }

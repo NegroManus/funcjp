@@ -8,6 +8,6 @@ for w in lowercase_words:
     
 lengths = map(len, words)
 lengths = (len(w) for w in words)
-print("Laengen:")
+print("Längen:")
 for l in lengths:
     print(l)

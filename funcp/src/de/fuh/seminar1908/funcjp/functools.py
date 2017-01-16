@@ -1,4 +1,5 @@
-import functools, operator
+import functools
+import operator
 
 faculty_10 = functools.reduce(operator.mul, range(1, 11))
 print(faculty_10)

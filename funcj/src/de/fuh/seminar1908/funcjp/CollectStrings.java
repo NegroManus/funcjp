@@ -5,7 +5,7 @@ import java.util.stream.Stream;
 
 public class CollectStrings {
     public static Stream<String> streamFruits() {
-        return Stream.of("Banana", "Apple", "Melon");
+        return Stream.of("Banana", "Melon", "Apple");
     }
 
     public static void main(String[] args) {
@@ -16,6 +16,6 @@ public class CollectStrings {
         String fruitsWithoutApple = streamFruits()
                 .filter(s -> !s.equals("Apple"))
                 .collect(Collectors.joining(", ", "{", "}"));
-        System.out.println("Alles auﬂer Apfel: " + fruitsWithoutApple);
+        System.out.println("Alles au√üer Apfel: " + fruitsWithoutApple);
     }
 }

@@ -28,17 +28,12 @@ fluent_python.year = 2016
 
 books = [j8_in_action, j8_lambdas, fluent_python]
 
-# Buecherverarbeitung mit List Comprehension
+## Buecherverarbeitung mit List Comprehension
 def get_python_book_titles(books):
     return [b.title for b in books if "Python" in b.title]
 
 print(get_python_book_titles(books))
 
-## Set & Dict Comprehension
-# Set Comprehension
-chars = {char.lower() for string in fruits for char in string}
-print(chars)
-
-# Dict Comprehension
+##  Dict Comprehension
 book_dict = {b.title: b for b in books}
 print(book_dict)

@@ -1,10 +1,10 @@
-fruits = ["Banana", "Apple", "Melon"]
+fruits = ["Banana", "Melon", "Apple"]
 
-first_len5 = next((s for s in fruits if len(s) == 5), None)
-print("Erster String mit der Laenge 5:", first_len5)
+first_len_5 = next((s for s in fruits if len(s) == 5), None)
+print("Erster String mit der Länge 5:", first_len_5)
 
-all_len5 = all(s for s in fruits if len(s) == 5)
-print("Alle Strings haben die Laenge 5:", all_len5)
+all_len_5 = all(s for s in fruits if len(s) == 5)
+print("Alle Strings haben die Länge 5:", all_len_5)
 
-len5_sorted = sorted(s for s in fruits if len(s) == 5)
-print("Strings mit der Laenge 5 (alphabetisch sortiert):", len5_sorted)
+len_5_sorted = sorted(s for s in fruits if len(s) == 5)
+print("Strings mit der Länge 5 (alphabetisch sortiert):", len_5_sorted)
