@@ -4,7 +4,7 @@ class Book:
     year = None
 
     def __repr__(self):
-        return "Book({self.title})"
+        return f"Book({self.title})"
 
 
 j8_in_action = Book()
