@@ -2,9 +2,9 @@ class Book:
     title = None
     authors = []
     year = None
-    
+
     def __repr__(self):
-        return f"Book({self.title})"
+        return "Book({self.title})"
 
 
 j8_in_action = Book()
@@ -25,7 +25,8 @@ fluent_python.year = 2016
 
 books = [j8_in_action, j8_lambdas, fluent_python]
 
-import operator, itertools
+import operator
+import itertools
 
 counter = itertools.count(step=2)
 print("counter:")
@@ -62,5 +63,5 @@ print(list(nums_greater_equal_4))
 
 grouped_by_year = itertools.groupby(books, operator.attrgetter("year"))
 print("grouped_by_year:")
-for group in grouped_by_year:
-    print(group[0],"=>", list(group[1]))
+for year, books in grouped_by_year:
+    print(year, "=>", list(books))
